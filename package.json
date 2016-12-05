@@ -4,7 +4,9 @@
   "description": "Yet, one more of those pretentious projects that are offering to solve the very few incovenients that can be found with redux-thunk.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/_mocha --compilers js:babel-register -r src/test/setup.mocha.js --recursive './src/**/*.test.js'",
+    "test:watch": "npm test -- --watch",
+    "build": "NODE_ENV=production babel src/index.js --out-file dist/main.js"
   },
   "keywords": [
     "redux",
@@ -14,5 +16,15 @@
     "thunk"
   ],
   "author": "Jean de Campredon",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.11.1",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6"
+  }
 }
