@@ -1,4 +1,4 @@
-# redux-thunk-functional
+# redux-thunk-functional yeah, another redux-thunk helper
 
 Yet, one more of those pretentious projects that are offering to solve the very few incovenients that can be found with redux-thunk.
 
